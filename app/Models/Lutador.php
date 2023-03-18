@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Lutadores extends Model
+class Lutador extends Model
 {
     use HasFactory;
 
     // Indica o nome da tabela do banco de dados
-    protected $table = "ficha técnica";
+    protected $table = "lutadores";
 
     // Indica os campos que podem ser preenchidos pelo usuário
     protected $fillable = [

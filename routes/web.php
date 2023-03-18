@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\LutadoresController;
+use App\Http\Controllers\LutadorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,22 +20,22 @@ Route::get('/', function () {
 // Rotas para o CRUD de lutadores
 
 // Rota para a listagem de lutadores
-Route::get('/lutadores', [LutadoresController::class, 'index'])->name('lutadores.index');
+Route::get('/lutadores', [LutadorController::class, 'index'])->name('lutadores.index');
 
 // Rota para o formulário de criação de lutadores
-Route::get('/lutadores/create', [LutadoresController::class, 'create'])->name('lutadores.create');
+Route::get('/lutadores/create', [LutadorController::class, 'create'])->name('lutadores.create');
 
-// Rota para o mostrar um gato específico
-Route::get('/lutadores/{id}', [LutadoresController::class, 'show'])->name('lutadores.show');
+// Rota para o mostrar um lutador específico
+Route::get('/lutadores/{id}', [LutadorController::class, 'show'])->name('lutadores.show');
 
 // Rota para o formulário de edição de lutadores
-Route::get('/lutadores/{id}/edit', [LutadoresController::class, 'edit'])->name('lutadores.edit');
+Route::get('/lutadores/{id}/edit', [LutadorController::class, 'edit'])->name('lutadores.edit');
 
-// Rota que armazena um novo gato no banco de dados
-Route::post('/lutadores', [LutadoresController::class, 'store'])->name('lutadores.store');
+// Rota que armazena um novo lutador no banco de dados
+Route::post('/lutadores', [LutadorController::class, 'store'])->name('lutadores.store');
 
-// Rota que atualiza um gato específico no banco de dados
-Route::put('/lutadores/{id}', [LutadoresController::class, 'update'])->name('lutadores.update');
+// Rota que atualiza um lutador específico no banco de dados
+Route::put('/lutadores/{id}', [LutadorController::class, 'update'])->name('lutadores.update');
 
-// Rota que remove um gato específico do banco de dados
-Route::delete('/lutadores/{id}', [LutadoresController::class, 'destroy'])->name('lutadores.destroy');
+// Rota que remove um lutador específico do banco de dados
+Route::delete('/lutadores/{id}', [LutadorController::class, 'destroy'])->name('lutadores.destroy');
