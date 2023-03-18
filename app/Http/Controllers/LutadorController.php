@@ -18,7 +18,7 @@ class LutadorController extends Controller
      */
     public function create()
     {
-        //
+        return view('lutadores.create');
     }
 
     /**
