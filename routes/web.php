@@ -26,7 +26,7 @@ Route::get('/lutadores', [LutadorController::class, 'index'])->name('lutadores.i
 Route::get('/lutadores/create', [LutadorController::class, 'create'])->name('lutadores.create');
 
 // Rota para o mostrar um lutador específico
-Route::get('/lutadores/{id}', [LutadorController::class, 'show'])->name('lutadores.show');
+Route::get('/lutadores/{lutador}', [LutadorController::class, 'show'])->name('lutadores.show');
 
 // Rota para o formulário de edição de lutadores
 Route::get('/lutadores/{id}/edit', [LutadorController::class, 'edit'])->name('lutadores.edit');

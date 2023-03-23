@@ -12,6 +12,8 @@
         <div class="container">
             <h1>Lista de lutador</h1>
 
+            <a class="btn btn-outline-succes my-2" href="{{ route('lutadores.create') }}">Novo Lutador</a>
+
             <table class="table table-hover table-bordered table-primary">
                 <tr class="table-dark">
                     <th>Nome</th>
@@ -31,7 +33,9 @@
                         <td>{{ $lutador->sexo }}</td>
                         <td>{{ $lutador->peso }}</td>
                         <td>{{ $lutador->categoria }}</td>
-                        <td></td>
+                        <td>
+                            <a class="link" href="{{ route('lutadores.show', $lutadores->id) }}">Ver</a>
+                        </td>
                     </tr>
                 @endforeach
             </table>

@@ -21,7 +21,9 @@ return new class extends Migration
             $table->string('sexo');
             $table->string('peso');
             $table->string('categoria');
-            $table->string('foto');
+            $table->string('foto')->nullable();
+
+            $table->timestamps();
         });
     }
 
