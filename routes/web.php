@@ -29,13 +29,13 @@ Route::get('/lutadores/create', [LutadorController::class, 'create'])->name('lut
 Route::get('/lutadores/{lutador}', [LutadorController::class, 'show'])->name('lutadores.show');
 
 // Rota para o formulário de edição de lutadores
-Route::get('/lutadores/{id}/edit', [LutadorController::class, 'edit'])->name('lutadores.edit');
+Route::get('/lutadores/{lutador}/edit', [LutadorController::class, 'edit'])->name('lutadores.edit');
 
 // Rota que armazena um novo lutador no banco de dados
 Route::post('/lutadores', [LutadorController::class, 'store'])->name('lutadores.store');
 
 // Rota que atualiza um lutador específico no banco de dados
-Route::put('/lutadores/{id}', [LutadorController::class, 'update'])->name('lutadores.update');
+Route::put('/lutadores/{lutador}', [LutadorController::class, 'update'])->name('lutadores.update');
 
 // Rota que remove um lutador específico do banco de dados
 Route::delete('/lutadores/{id}', [LutadorController::class, 'destroy'])->name('lutadores.destroy');
