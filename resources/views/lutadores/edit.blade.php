@@ -6,29 +6,29 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Gato #{{ $gato->id }}</title>
+        <title>Gato #{{ $lutador->id }}</title>
     </head>
     <body>
         <div class="container">
-            <h1>Edição do gato {{ $gato->id }}</h1>
+            <h1>Edição do Lutador {{ $lutador->id }}</h1>
 
-            <form method="POST" action="{{ route('gatos.update', $gato->id) }}">
+            <form method="POST" action="{{ route('gatos.update', $lutador->id) }}">
                 @csrf
                 @method('PUT')
 
                 <div class="mb-3">
                     <label>Nome</label>
-                    <input type="text" name="nome" class="form-control" value="{{ $Lutador->nome }}">
+                    <input type="text" name="nome" class="form-control" value="{{ $lutador->nome }}">
                 </div>
 
                 <div class="mb-3">
                     <label>Sobrenome</label>
-                    <input type="text" name="sobrenome" class="form-control" value="{{ $Lutador->sobrenome }}">
+                    <input type="text" name="sobrenome" class="form-control" value="{{ $lutador->sobrenome }}">
                 </div>
 
                 <div class="mb-3">
                     <label>Idade</label>
-                    <input type="number" name="idade" class="form-control" value="{{ $Lutador->idade }}">
+                    <input type="number" name="idade" class="form-control" value="{{ $lutador->idade }}">
                 </div>
 
                 <div class="mb-3">

@@ -34,7 +34,7 @@
                         <td>{{ $lutador->peso }}</td>
                         <td>{{ $lutador->categoria }}</td>
                         <td>
-                            <a class="link" href="{{ route('lutadores.show', $lutadores->id) }}">Ver</a>
+                            <a class="link" href="{{ route('lutadores.show', $lutador->id) }}">Ver</a>
                         </td>
                     </tr>
                 @endforeach

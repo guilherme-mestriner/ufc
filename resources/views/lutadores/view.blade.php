@@ -24,7 +24,15 @@
 
             <h3>Peso-{{ $lutador->categoria }}</h3>
 
-            <a href="{{ route('lutadores.index') }}">voltar a Lista</a>
+            <a class="btn btn--ligth" href="{{ route('lutadores.index') }}">Voltar a Lista</a>
+            <a class="btn btn-warning" href="{{ route('lutadores.edit', $lutador->id) }}">Editar</a>
+
+            <form method="POST" action="{{ route('lutadores.destroy', $lutador->id) }}">
+                @csrf
+                @method('DELETE')
+
+                <input type="submit" value="Excluir Lutador" class="btn btn-danger">
+            </form>
         </div>
 
     </body>

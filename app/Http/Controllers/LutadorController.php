@@ -56,7 +56,7 @@ class LutadorController extends Controller
     /**
      * Mostra o formulário para editar um lutador específico
      */
-    public function edit(Lutador $Lutador)
+    public function edit(Lutador $lutador)
     {
         //Retorna a view lutadores.edit com o objeto $lutador
         return view('lutadores.edit', compact('lutador'));
@@ -65,20 +65,22 @@ class LutadorController extends Controller
     /**
      * Atualiza um lutador específico
      */
-    public function update(Request $requisicao, Lutador $Lutador)
+    public function update(Request $requisicao, Lutador $lutador)
     {
         //Atualiza o objeto com os dados da requisição
-        $Lutador->update($requisicao->all());
+        $lutador->update($requisicao->all());
 
         //Redireciona para a página de detalhes do gato
-        return redirect()->route('lutadores.show', $Lutador->id);
+        return redirect()->route('lutadores.show', $lutador->id);
     }
 
     /**
      * Remove um lutador específico
      */
-    public function destroy($id)
+    public function destroy(Lutador $Lutador)
     {
-        //
+        $Lutador->delete();
+
+        return redirect()->route('lutadores.index');
     }
 }

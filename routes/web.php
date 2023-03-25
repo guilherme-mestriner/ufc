@@ -38,4 +38,4 @@ Route::post('/lutadores', [LutadorController::class, 'store'])->name('lutadores.
 Route::put('/lutadores/{lutador}', [LutadorController::class, 'update'])->name('lutadores.update');
 
 // Rota que remove um lutador específico do banco de dados
-Route::delete('/lutadores/{id}', [LutadorController::class, 'destroy'])->name('lutadores.destroy');
+Route::delete('/lutadores/{lutador}', [LutadorController::class, 'destroy'])->name('lutadores.destroy');
